@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Fira Code", monospace;
+  background-color: grey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#drum-machine {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.drum-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  padding: 20px;
+  margin-right: 2rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.drum-pad {
+  font-size: 2rem;
+  font-weight: 600;
+  width: 100px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: goldenrod;
+  border: 2px solid steelblue;
+  box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 5px;
+}
+
+.playing {
+  transform: scale(1.1);
+  transition: cubic-bezier(0.86, 0, 0.07, 1) 400ms;
+  border-color: cornsilk;
+  box-shadow: 0 0 1rem burlywood;
+}
+
+.display-box{
+  background-color: ghostwhite;
+  width: 300px;
+  height: 100px;
+  margin: 15px auto;
+  padding: 25px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 800;
 }
